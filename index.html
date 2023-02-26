@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Random Number Generator</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-		}
-		h1 {
-			margin-top: 50px;
-		}
-		#result {
-			font-size: 48px;
-			margin-top: 50px;
-		}
-		button {
-			margin-top: 50px;
-			padding: 10px 20px;
-			background-color: #4CAF50;
-			color: #fff;
-			border: none;
-			border-radius: 5px;
-			font-size: 16px;
-			cursor: pointer;
-		}
-	</style>
-</head>
-<body>
-	<h2>Random Number Generator</h2>
-	<h2>Click on button below</h2>
-	<div id="result"></div>
-	<button onclick="generateRandomNumber()">Generate</button>
-
-	<script>
-		function generateRandomNumber() {
-			var min = 1;
-			var max = 100;
-			var randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-			document.getElementById("result").innerHTML = randomNumber;
-		}
-	</script>
-</body>
+  <head>
+    <title>Random Number Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <section class="sticky">
+        <div class="bubbles">
+            <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+          <div class="bubble"></div>
+        </div>
+      </section>
+      <div class="content">
+    <h1>Random Number Generator</h1>
+    <p>Click the button below to generate a random number between 1 and 100:</p>
+    <button onclick="generateNumber()">Generate Number</button>
+    <p id="number"></p>
+    <p>Select the properties you want the random number to be based on:</p>
+    <i>Select one check-box at a time</i>
+   
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="property" value="even">Even</label>
+      <label><input type="checkbox" name="property" value="odd">Odd</label>
+      <label><input type="checkbox" name="property" value="prime">Prime</label>
+      <label><input type="checkbox" name="property" value="composite">Composite</label>
+      <label><input type="checkbox" name="property" value="multipleOf3">multipleOf3</label>
+      <label><input type="checkbox" name="property" value="multipleOf5">multipleOf5</label>
+      <label><input type="checkbox" name="property" value="multipleOf7">multipleOf7</label>
+    </div>
+    <button onclick="generateNumberWithProperties()">Generate Number with Properties</button>
+    <p id="number-with-properties"></p>
+    <script src="./script.js"></script>
+    </div>
+  </body>
 </html>
