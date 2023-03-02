@@ -2,6 +2,36 @@ function generateNumber() {
     var number = Math.floor(Math.random() * 100) + 1;
     document.getElementById("number").innerHTML = number;
   }
+  var count = 0; // Keep track of the number of generated numbers
+  var numbers = []; // An array to store the generated numbers
+
+  function generateNumberWithinRange() {
+    if (count >= 100) {
+      alert("All numbers have been generated");
+      return;
+    }
+
+    // Generate the next number based on the count
+    var number;
+    if (count < 25) {
+      number = Math.floor(Math.random() * (12 - 6 + 1) + 6);
+    } else if (count < 50) {
+      number = Math.floor(Math.random() * (12 - 3 + 1) + 3);
+    } else if (count < 75) {
+      number = Math.floor(Math.random() * (6 - 3 + 1) + 3);
+    } else {
+      number = Math.floor(Math.random() * (9 - 6 + 1) + 6);
+    }
+
+    // Add the number to the array and update the HTML
+    numbers.push(number);
+    document.getElementById("number").innerHTML = number;
+
+    // Increment the count
+    count++;
+  }
+
+  
   
   function generateNumberWithProperties() {
     var properties = document.getElementsByName("property");

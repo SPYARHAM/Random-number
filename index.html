@@ -5,36 +5,30 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <section class="sticky">
-        <div class="bubbles">
-            <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-        </div>
-      </section>
+
       <div class="content">
     <h1>Random Number Generator</h1>
     <p>Click the button below to generate a random number between 1 and 100:</p>
     <button onclick="generateNumber()">Generate Number</button>
     <p id="number"></p>
+    <p>Click on the button below to generate number within specific range</p>
+    <i>Here first 25 numbers are between 6 to 12, next 25 between 12 -3, next 25 between 3-6 and last 24 between 6-9</i>
+    <div>
+      <button onclick="generateNumberWithinRange()">Generate Number Within Range</button>
+      <p id="number2"></p>
+    </div>
+    
     <p>Select the properties you want the random number to be based on:</p>
     <i>Select one check-box at a time</i>
    
     <div class="checkbox-group">
-      <label><input type="checkbox" name="property" value="even">Even</label>
-      <label><input type="checkbox" name="property" value="odd">Odd</label>
-      <label><input type="checkbox" name="property" value="prime">Prime</label>
-      <label><input type="checkbox" name="property" value="composite">Composite</label>
-      <label><input type="checkbox" name="property" value="multipleOf3">multipleOf3</label>
-      <label><input type="checkbox" name="property" value="multipleOf5">multipleOf5</label>
-      <label><input type="checkbox" name="property" value="multipleOf7">multipleOf7</label>
+      <label><input type="radio" name="property" value="even">Even</label>
+      <label><input type="radio" name="property" value="odd">Odd</label>
+      <label><input type="radio" name="property" value="prime">Prime</label>
+      <label><input type="radio" name="property" value="composite">Composite</label>
+      <label><input type="radio" name="property" value="multipleOf3">multipleOf3</label>
+      <label><input type="radio" name="property" value="multipleOf5">multipleOf5</label>
+      <label><input type="radio" name="property" value="multipleOf7">multipleOf7</label>
     </div>
     <button onclick="generateNumberWithProperties()">Generate Number with Properties</button>
     <p id="number-with-properties"></p>
