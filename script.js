@@ -25,7 +25,7 @@ function generateNumber() {
 
     // Add the number to the array and update the HTML
     numbers.push(number);
-    document.getElementById("number2").innerHTML = number;
+    document.getElementById("number-with-range").innerHTML = number;
 
     // Increment the count
     count++;
