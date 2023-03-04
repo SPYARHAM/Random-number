@@ -31,8 +31,34 @@ function generateNumber() {
     count++;
   }
 
-  
-  
+  function generateNumberWithLocation(){
+    var location =document.getElementsByName("location");
+    var selectedLocation = [];
+    for(var i=0;i<location.length;i++){
+      if(location[i].checked){
+        selectedLocation.push(location[i].value);
+      }
+    }
+    if (selectedLocation.length == 0) {
+      alert("Please select at least one Location.");
+      return;
+    }
+    var number;
+    while(true){
+      number=Math.floor(Math.random()*100) + 1;
+      if(selectedLocation.includes("India") && isEven(number)){
+        break;
+      }
+      if(selectedLocation.includes("USA") && isOdd(number)){
+        break;
+      }
+      if(selectedLocation.includes("Russia") && isPrime(number)){
+        break;
+      }
+    }
+    document.getElementById("number-with-location").innerHTML = number;
+  }
+
   function generateNumberWithProperties() {
     var properties = document.getElementsByName("property");
     var selectedProperties = [];

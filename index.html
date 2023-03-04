@@ -17,7 +17,19 @@
       <button onclick="generateNumberWithinRange()">Generate Number Within Range</button>
       <p id="number-with-range"></p>
     </div>
-   
+    <div class="location-group">
+      <p> Choose a location</p>
+      <p> <i>India for Even , USA for odd and Russia For prime</i></p>
+      <label><input type="radio" name="location" value="India">India</label>
+      <label><input type="radio" name="location" value="USA">USA</label>
+      <label><input type="radio" name="location" value="Russia">Russia</label>
+    
+     </div>
+
+    
+  <button onclick="generateNumberWithLocation()">Generate Number Using Location</button>
+
+  <p id="number-with-location"></p>
     
     <p>Select the properties you want the random number to be based on:</p>
     <i>Select one check-box at a time</i>
@@ -27,9 +39,9 @@
       <label><input type="radio" name="property" value="odd">Odd</label>
       <label><input type="radio" name="property" value="prime">Prime</label>
       <label><input type="radio" name="property" value="composite">Composite</label>
-      <label><input type="radio" name="property" value="multipleOf3">multipleOf3</label>
-      <label><input type="radio" name="property" value="multipleOf5">multipleOf5</label>
-      <label><input type="radio" name="property" value="multipleOf7">multipleOf7</label>
+      <label><input type="radio" name="property" value="multipleOf3">multiple Of 3</label>
+      <label><input type="radio" name="property" value="multipleOf5">multiple Of 5</label>
+      <label><input type="radio" name="property" value="multipleOf7">multiple Of 7</label>
     </div>
     <button onclick="generateNumberWithProperties()">Generate Number with Properties</button>
     <p id="number-with-properties"></p>
