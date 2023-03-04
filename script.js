@@ -32,7 +32,7 @@ function generateNumber() {
   }
 
   function generateNumberWithLocation(){
-    var location =document.getElementsByName("location");
+    var location = document.getElementsByName("location");
     var selectedLocation = [];
     for(var i=0;i<location.length;i++){
       if(location[i].checked){
